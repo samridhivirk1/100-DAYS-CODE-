@@ -1,0 +1,15 @@
+#include <stdio.h>
+float temp(float c); 
+int main(){
+    float d;
+    printf("ENTER YOUR TEMPERATUR IN CELSIUS:\n");
+    scanf("%f",&d);
+    printf("YOUR TEMPERATURE IN FARENHIET IS: %.2f",temp(d));
+    return 0;
+
+}
+float temp(float c){
+    float celtofar = (9*c/5)+32;
+    return celtofar;
+
+}
