@@ -1,0 +1,30 @@
+#include <stdio.h>
+
+int findRepeatedElement(int arr[], int n) {
+    int seen[n];
+    for (int i = 0; i < n; i++) {
+        if (seen[arr[i]]) {
+            return arr[i];
+        }
+        seen[arr[i]] = 1;
+    }
+    return -1;  
+}
+
+int main() {
+    int n;
+
+    
+    printf("Enter size of array: ");
+    scanf("%d", &n);
+    int arr[n];
+    printf("Enter elements of array (one repeated): ");
+    for (int i = 0; i < n; i++) {
+        scanf("%d", &arr[i]);
+    }
+
+    int repeated = findRepeatedElement(arr, n);
+    printf("Repeated element: %d\n", repeated);
+
+    return 0;
+}
